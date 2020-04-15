@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Android Development with Kotlin</title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/1200px-Kotlin-logo.svg.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #1abc9c;
+}
+
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+#customers tr:hover {background-color: rgb(107, 105, 105);}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Simple Api</h1>
+  <p>Android Development Course အတွက် Api ဖြစ်ပါတယ်။</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/1200px-Kotlin-logo.svg.png" alt="" width="40px" height="40px">
+  <p>အသုံးပြုနည်း</p>
+  <p>Post Man နဲ့ အရင် စမ်းကြည့်ပါ</p>
+  <p>
+    <p onclick="clickCopy()">Main Url - http://3.87.204.47:8000/</p>
+
+  </p>
+    <table id="customers">
+        <tr>
+          <th>Operation</th>
+          <th>HTTP Method</th>
+          <th>Endpoint</th>
+        </tr>
+        <tr>
+          <td>Get a list of entities</td>
+          <td>GET</td>
+          <td>/api/users/</td>
+        </tr>
+        <tr>
+          <td>Get a single entity by id</td>
+          <td>GET</td>
+          <td>/api/user/{id}</td>
+        </tr>
+        <tr>
+          <td>Create entity</td>
+          <td>POST</td>
+          <td>/api/user/</td>
+        </tr>
+        <tr>
+          <td>Update entity by id</td>
+          <td>PATCH</td>
+          <td>/api/user/{id}</td>
+        </tr>
+        <tr>
+          <td>Delete entity by id</td>
+          <td>DELETE</td>
+          <td>/api/user/{id}</td>
+        </tr>
+      </table>	
+</div>
+
+</body>
+<script>
+function clickCopy() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+</html>

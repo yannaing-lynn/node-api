@@ -122,6 +122,6 @@ app.delete("/api/user/:id", (req, res, next) => {
 
 // Root path
 app.get("/", (req, res, next) => {
-    res.json({"message":"Api စမ်းနေတာပါ။ Link တွေ့တိုင်း နှိပ်ကြည့်တဲ့အကျင့်ကိုဖျောက်ပါ။ လက်ဆေးပါ။ အိမ်မှာပဲနေပါ"})
+    res.sendFile('index.html',{root:__dirname})
 });
 
